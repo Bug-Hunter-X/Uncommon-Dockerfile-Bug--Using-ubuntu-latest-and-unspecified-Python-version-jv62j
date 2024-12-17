@@ -1,0 +1,3 @@
+This repository demonstrates a common but subtle issue in Dockerfiles: using `ubuntu:latest` and an unspecified Python version.
+
+The original Dockerfile uses `ubuntu:latest` which is a very large base image and receives frequent updates, potentially breaking builds unexpectedly. Additionally, using `python3` without specifying a version (e.g., `python:3.9`) can cause issues if the system Python3 version changes.
